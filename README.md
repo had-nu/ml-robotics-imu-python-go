@@ -26,8 +26,8 @@ Rather than just producing working code, this project emphasizes:
 ### Why a Fictional Company?
 
 Using RoboSense Labs as a fictional business case provides:
-- Realistic constraints (cost, latency, accuracy requirements)
-- Clear success metrics (not just "maximize accuracy")
-- Context for technical decisions (why this matters beyond academia)
+- [ ] Realistic constraints (cost, latency, accuracy requirements)
+- [ ] Clear success metrics (not just "maximize accuracy")
+- [ ] Context for technical decisions (why this matters beyond academia)
 
 ---
