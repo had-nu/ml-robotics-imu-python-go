@@ -274,7 +274,7 @@ All models must outperform the baseline by **>5% F1-Score**.
 
 ---
 
-## Learning Checkpoints
+## Learning Objectives (Academic Context)
 
 Ensure understanding of:
 - Why supervised learning applies  
