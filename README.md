@@ -6,8 +6,8 @@
 
 ## Documentation
 
-- [Phase 1: Problem Definition](docs/01-problem-definition/)
-- [Phase 2: Data Acquisition](docs/02-data-acquisition/)
+- [Phase 1: Problem Definition](docs/phase-1-problem-definition/)
+- [Phase 2: Data Acquisition](docs/phase-2-data-acquisition/)
 
 ## Project Structure
 ```
