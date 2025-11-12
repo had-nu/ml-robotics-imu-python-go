@@ -111,7 +111,7 @@ Develop an **ML-based classification system** using low-cost IMU sensors (accele
 ### Deployment Architecture
 
 #### Robot Hardware (Edge)
-´´´
+```
 ├── IMU Sensors (100Hz sampling)
 │ ├── Accelerometer (3-axis)
 │ └── Gyroscope (3-axis)
@@ -122,15 +122,15 @@ Develop an **ML-based classification system** using low-cost IMU sensors (accele
 ├── Load trained model
 ├── Real-time classification
 └── Send state to control system
-´´´
+```
 
 #### Cloud (Training Pipeline)
-´´´
+```
 ├── Data Collection & Storage
 ├── Model Training (Python)
 ├── Model Evaluation & Validation
 └── Model Versioning & Deployment
-´´´
+```
 
 ---
 
