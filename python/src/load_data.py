@@ -72,6 +72,16 @@ def load_feature_names():
     return df['name'].values
 
 
+def load_activity_labels():
+    filepath = os.path.join(DATA_DIR, 'activity_labels.txt')
+    df = pd.read_csv(filepath, sep=r'\s+', header=None, names=['id', 'activity'])
+    activity_map = dict(zip(df['id'], df['activity']))
+
+    print(f"\nLoaded {len(activity_map)} activity labels")
+    
+    return activity_map
+ 
+
 def main():
     X_train = load_features_train()
     y_train = load_labels_train()
@@ -82,6 +92,12 @@ def main():
     X_train.columns = names
     X_test.columns = names
     
+    y_train.columns = ['activity_id']
+    y_test.columns = ['activity_id']
+
+    activity_map = load_activity_labels()
+    y_train['activity_name'] = y_train['activity_id'].map(activity_map)
+    y_test['activity_name'] = y_test['activity_id'].map(activity_map)
     
     print(f"\nDataset completo:")
     print(f"Train: {X_train.shape[0]} samples, {X_train.shape[1]} features")
@@ -90,6 +106,9 @@ def main():
     
     print(f"\nVerificação - X_train com nomes:")
     print(X_train.iloc[:2, :3])
+
+    print(f"\nVerificação - y_train com nomes:")
+    print(y_train.head())
 
 
 if __name__ == "__main__":
