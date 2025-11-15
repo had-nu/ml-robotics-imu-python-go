@@ -13,7 +13,7 @@ def load_features_train():
 
     df = pd.read_csv(filepath, sep=r'\s+', header=None)
 
-    print(f"☑ Loaded {filepath}")
+    print(f"\n ☑ Loaded {filepath}")
     print(f" Shape: {df.shape}")
     print(f" Primeiras 3 colunas, 2 linhas: ")
     print(df.iloc[:2, :3])
@@ -21,10 +21,24 @@ def load_features_train():
     return df
 
 
+def load_labels_train():
+    filepath = os.path.join(DATA_DIR, 'train', 'y_train.txt')
+
+    df = pd.read_csv(filepath, header=None)
+
+    print(f"\n ☑ Loaded {filepath}")
+    print(f" Shape: {df.shape}")
+    print(f" Primeiros 5 labels: {df.head()}")
+
+    return df
+
+
 def main():
-    """Testa o carregamento"""
     X_train = load_features_train()
+    y_train = load_labels_train()
+
     print(f"\n Total de features: {X_train.shape[1]}")
+    print(f"Total de samples: {y_train.shape[0]}")
 
 
 if __name__ == "__main__":

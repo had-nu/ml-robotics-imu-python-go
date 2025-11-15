@@ -1,4 +1,4 @@
-with open('../../data/raw/UCI-HAR Dataset/train/X_train.txt', 'r') as f:
+with open('../../data/raw/UCI-HAR Dataset/train/y_train.txt', 'r') as f:
     linha1 = f.readline()
     linha2 = f.readline()
 
